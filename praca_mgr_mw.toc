@@ -1,8 +1,9 @@
 \babel@toc {english}{}
 \contentsline {chapter}{Wprowadzenie}{5}%
 \contentsline {chapter}{\numberline {1}Current state of Quantum Computing}{7}%
-\contentsline {section}{\numberline {1.1}Problems of practical QC - NISQ}{7}%
-\contentsline {section}{\numberline {1.2}Gate model}{7}%
+\contentsline {section}{\numberline {1.1}Gate model}{7}%
+\contentsline {subsection}{\numberline {1.1.1}Error correction}{7}%
+\contentsline {section}{\numberline {1.2}Problems of practical QC - NISQ}{7}%
 \contentsline {section}{\numberline {1.3}Quantum Annealing}{7}%
 \contentsline {chapter}{\numberline {2}What actually is Quantum Annealing}{9}%
 \contentsline {section}{\numberline {2.1}Thermal Annealing}{9}%
@@ -11,3 +12,4 @@
 \contentsline {chapter}{\numberline {3}The problem}{11}%
 \contentsline {chapter}{\numberline {4}Practical relization of The problem}{13}%
 \contentsline {chapter}{\numberline {5}Conclusions and remarks}{15}%
+\contentsline {chapter}{\numberline {6}Notebook}{17}%

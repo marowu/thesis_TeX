@@ -13,10 +13,9 @@
 % Dodanie wielu autorów i tłumaczenia na angielski - Kuba Pochrybniak, 29.11.2016
 
 \documentclass[en]{pracamgr}
-\autor{Marek Wieczorek}{426777}
 
 % Dane magistrantów:
-%\autor{Autor Zerowy}{342007}
+\autor{Marek Wieczorek}{426777}
 %\autori{Autor Pierwszy}{342013}
 %\autorii{Drugi Autor-Z-Rzędu}{231023}
 %\autoriii{Trzeci z Autorów}{777321}
@@ -35,16 +34,6 @@
 
 % informatyka - nie okreslamy zakresu (opcja zakomentowana)
 % matematyka - zakres moze pozostac nieokreslony,
-% a jesli ma byc okreslony dla pracy mgr,
-% to przyjmuje jedna z wartosci:
-% {metod matematycznych w finansach}
-% {metod matematycznych w ubezpieczeniach}
-% {matematyki stosowanej}
-% {nauczania matematyki}
-% Dla pracy licencjackiej mamy natomiast
-% mozliwosc wpisania takiej wartosci zakresu:
-% {Jednoczesnych Studiow Ekonomiczno--Matematycznych}
-
 % \zakres{Tu wpisac, jesli trzeba, jedna z opcji podanych wyzej}
 
 % Praca wykonana pod kierunkiem:
@@ -60,8 +49,8 @@
 \dziedzina{ 
 %11.0 Matematyka, Informatyka:\\ 
 %11.1 Matematyka\\ 
-11.2 Statystyka\\ 
-%11.3 Informatyka\\ 
+%11.2 Statystyka\\ 
+11.3 Informatyka\\ 
 %11.4 Sztuczna inteligencja\\ 
 %11.5 Nauki aktuarialne\\
 %11.9 Inne nauki matematyczne i informatyczne
@@ -84,29 +73,17 @@
 \maketitle
 
 %tu idzie streszczenie na strone poczatkowa
-\begin{abstract}
-  
-\end{abstract}
+\include{src/Abstract}
 
 \tableofcontents
 %\listoffigures
 %\listoftables
 
-\chapter*{Wprowadzenie}
-\addcontentsline{toc}{chapter}{Wprowadzenie}
+\include{src/Intro}
+\include{src/QC_current/cha_QC_Current}
+\include{src/QA/cha_What_actually_is_QA}
 
-\chapter{Current state of Quantum Computing}
-\section{Gate model}
-\subsection{Error correction}
-\section{Problems of practical QC - NISQ}
 
-\section{Quantum Annealing}
-Quantum annealing has some interesting properties. It is analog in nature and because the computation happens in a ground state it is unaffected by decoherence \citep{McGeoch}. 
-\cite{McGeoch}
-\chapter{What actually is Quantum Annealing}
-\section{Thermal Annealing}
-\section{Simulated Annealing}
-\section{Quantum Annealing}
 
 \chapter{The problem}
 \chapter{Practical relization of The problem}
@@ -118,10 +95,3 @@ Ocean toolkit is the software suite currently used by DWave to solve computation
 
 
 \end{document}
-
-
-%%% Local Variables:
-%%% mode: latex
-%%% TeX-master: t
-%%% coding: latin-2
-%%% End:
