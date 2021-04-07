@@ -1,6 +1,6 @@
 This is BibTeX, Version 0.99d
 Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
-The top-level auxiliary file: praca_mgr_mw.aux
+The top-level auxiliary file: mw_thesis.aux
 Reallocating 'name_of_file' (item size: 1) to 17 items.
 A level-1 auxiliary file: src/Abstract.aux
 Reallocating 'name_of_file' (item size: 1) to 14 items.
@@ -20,7 +20,7 @@ Database file #1: ref.bib
 Warning--can't use both volume and number fields in mcgeoch2014adiabatic
 You've used 2 entries,
             2118 wiz_defined-function locations,
-            514 strings with 4372 characters,
+            514 strings with 4366 characters,
 and the built_in function-call counts, 432 in all, are:
 = -- 33
 > -- 14
