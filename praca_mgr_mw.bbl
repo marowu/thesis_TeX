@@ -1,9 +1,12 @@
 \begin{thebibliography}{1}
 
-\bibitem{McGeoch}
+\bibitem{DWGitHub}
+D-Wave~Systems Inc.
+
+\bibitem{mcgeoch2014adiabatic}
 Catherine~C. McGeoch.
-\newblock {\em Adiabatic Quantum Computation and Quantum Annealing - Theory and
-  Practice}.
-\newblock Morgan & Claypool Publishers, 2014.
+\newblock {\em Adiabatic quantum computation and quantum annealing: Theory and
+  practice}, volume~5.
+\newblock Morgan \& Claypool Publishers, 2014.
 
 \end{thebibliography}
