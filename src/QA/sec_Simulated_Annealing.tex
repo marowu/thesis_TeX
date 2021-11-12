@@ -1,1 +1,24 @@
 \section{Simulated Annealing}
+As an optimizational algorithm, simulated annealing emerged in the early '80 in a paper by Kirkpatrick, Gelatt, and Vecchi \cite{kirkpatrick1983optimization}. As of 2021, it was cited almost 50\,000 times, indicating how influential the idea is. The work of Kirkpatrick et al. is based on much older concept, the Metropolis algorithm by Metropolis et al. \cite{metropolis1953equation}. The authors devised a computational method for studying aggregate properties of the large number of particles, a subject of the statistical mechanics. As the number of particles is typically big (an order of $10^23/cm^3$) only the most probable behaviour of the system is observed in the experiments. To calculate parameters of this observable state, a Gibbs ensemble is used. It is an average of a parameter taken over all possible configurations, each defined by particle positions and weighted by a corresponding Boltzmann probability factor:
+\[p\propto e^{-E/kT}\]
+where $k$ is the Boltzmann constant, $T$ is temperature, $E$ the potential energy of the configuration, defined as:
+\[E=\frac{1}{2}\sum_{i=1}^{N}\sum_{j=1}^{N}V(d_{ij})\]
+where $V$ is the potential between particles, $d$ is the distance between them.
+
+The averaging involves integration over a high-dimensional configuration space. As the number of particles is high, so is the dimensionality of the integral. Metropolis et al. proposed a computational method for tackling the problem of integration, based on Monte Carlo method. They studied a group of interacting particles (56 or 224) packed in a two-dimensional, closed space, at a given temperature. Standard Monte Carlo method involves random, uniform sampling of points and assigning them a weight which represents the probability of finding a particular configuration. Any randomly selected state will most probably be far from "optimum", hence with high energy and finally with low weight (probability) assigned. Standard Monte-Carlo method which involves sampling from a uniform distribution would require a huge number of configurations to be calculated, most of which with a very low contribution. Instead the authors choose configurations with probability $e^{-E/kT}$ and weight them evenly.
+
+The algorithm starts from a random particle configuration of the particles, next following steps are executed in a loop :
+\begin{enumerate}
+	\item Move a chosen particle to new positions:
+		\[X\rightarrow X+\alpha\gamma_1\]
+		\[Y\rightarrow Y+\alpha\gamma_2\]
+	where $X$, $Y$ are the coordinates of the particle, $\alpha$ is the maximum allowed step, $\gamma_1$ and $\gamma_2$ are random numbers between $-1$ and $1$.
+	\item Calculate the change in energy $\Delta E$. If $\Delta E<0$ the move is always allowed, so we always accept "better" solution. If $\Delta E>0$ the move is allowed with probability $e^{-E/kT}$. To realise the probability, $\gamma_3$ between $0$ and $1$ is randomly selected. If $\gamma_3<e^{-E/kT}$ the move is accepted, else rejected.
+	\item Whether the configuration has changed or not, each step is taken into account for counting the ensembles.
+\end{enumerate}
+The described algorithm allows for studying the properties of a set of particles at a given temperature. There is a connection with optimisation as we have discussed states of lower energy, the optimal ones. Still there is a little chance of finding them randomly. So how to transform a computational method of statistical mechanics into a optimisation algorithm? Kirkpatrick et al. realised that by lowering the temperature of the algorithm, one would simulate cooling process. At the end of the process, the Boltzmann distribution collapses into the lowest energy states.
+%% TUTAJ wykres rozkładu boltzmanna p(T) dla E=10 i E=1000
+Unfortunately, low temperature is not a sufficient condition for finding  the optimal state. Please refer to section \ref{sec:thermal_annealing} for detailed description of thermal processes. Rapid cooling is a process called quenching where sub-optimal state, a local minimum is produced. Process of slow cooling aiming at releasing residual stresses in the material is annealing. When done slow enough, it results in an optimal material configuration. Hence the name of the algorithm \emph{simulated annealing}.
+
+The process of annealing clearly is a method of optimizing the material configuration. To universally apply it to optimisation problems it is important to clarify the idea of temperature, energy and the Boltzmann constant. All these values have a clear meaning in thermodynamics but in an algorithmic sense they relate to progress parameter, cost function and a coefficient.
+
