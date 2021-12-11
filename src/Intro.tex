@@ -1,5 +1,15 @@
 \chapter*{Introduction}
 \addcontentsline{toc}{chapter}{Introduction}
-Here describe what quantum computing is and its brief history
--Feynamnn lecture
--shores algorithm
+There is probably no single point in space-time where the concept of \textit{quantum computing} emerged for the very first time. In the 70' Paul Benioff was investigating the topic and in year 1980 published a foundational article \textit{The computer as a physical system: A microscopic quantum mechanical Hamiltonian model of computers as represented by Turing machines}\cite{benioff_computer_1980}. But it took celebrity-physicist and Nobel Prize winner Richard Feynman to mark the beginning of the discipline (for sure anegdoticaly). He discussed the topic in 1981 talk \textit{Simulating physics with computers} during a small conference on the topic of \textit{Physics of Computation} held at MIT. Present were also Paul Benioff and other scientists whose work contributed to the birth of the discipline: Rolf Landauer and Tom Toffoli \cite{mit_endicott_house_physics_2018}. In his foundational talk, Feynman indicated that for an efficient simulation of quantum phenomena, a different kind of computer was needed. The reasoning behind the idea is that quantum systems description grows exponentially with the number of particles involved. A system large enough will quickly overwhelm any classical computer. The conclusion of the talk:
+\begin{quote}
+Nature isn't classical, dammit, and if you want to make a simulation of Nature, you'd better make it quantum mechanical, and by golly it's a wonderful problem because it doesn't look so easy \cite{feynman_simulating_1982}.
+\end{quote}
+became famous and is often treated as a spark that ignited the discipline \cite{john_preskill_feynman_2017}\cite{trabesinger_quantum_2012}\cite{the_quantum_insider_global_2021}:
+\begin{quote}
+With those words, in 1981, Richard Feynman, an American physicist, introduced the idea that, by harnessing quantum mechanics, it might be possible to build a new kind of computer, capable of tackling problems that would cause a run-of-the-mill machine to choke \cite{the_economist_google_2019}.
+\end{quote}
+Following years have seen a gradual development of the ideas, with formalisation of the notion of a quantum computer by David Deutsch\cite{david_deutsch_quantum_1985} and other important results, all theoretical. Major breakthrough came in 1994 when Peter Shor demonstrated a quantum algorithm for efficient factorisation of big numbers. As modern cryptography (RSA public key encryption) relies on prohibitive cost of factorizing large enough numbers, the implications of the proposed algorithm were clear and caused quantum computing to draw major attention.
+Some like Rolf Landauer shared their scepticism whether an effective quantum computer could be ever built. They pointed out that discussed approaches required perfect devices, neglecting effects such as \textit{quantum decoherence}. Peter Shore was again the one to make a major contribution by proposing quantum error-correction. He proved, that a quantum code could be executed effectively even if errors occur, given that they are sufficiently rare. This of course comes at a cost --- a big computational overhead.
+
+At this stage, the theory was clearly ahead of the hardware, but the attempts to build quantum computer have been made. \textbf{What was the first practical attempt?}
+Digital vs. analog? How to introduce D-Wave into the topic? Is it the first quantum computer?
