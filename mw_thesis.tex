@@ -13,7 +13,10 @@
 
 % !TeX spellcheck = en_GB
 \documentclass[en]{pracamgr}
-
+\usepackage{amsfonts, color, soul, amsmath}
+\usepackage{float}
+\usepackage{graphicx}
+\graphicspath{ {./graphics/} }
 % Dane magistrantów:
 \autor{Marek Wieczorek}{426777}
 %\autori{Autor Pierwszy}{342013}
@@ -65,7 +68,7 @@
 \keywords{quantum annealing, D-Wave}
 
 % Tu jest dobre miejsce na Twoje własne makra i~środowiska:
-\newtheorem{defi}{Definicja}[section]
+%\newtheorem{defi}{Definicja}[section]
 
 % koniec definicji
 
@@ -79,13 +82,9 @@
 %\listoffigures
 %\listoftables
 
-\include{src/Intro}
-\include{src/QC_current/cha_QC_Current}
-\include{src/QA/cha_What_actually_is_QA}
-
+\include{src/Intro/cha_Intro}
+\include{src/How_to_Use_Quantum_Annealing/cha_How_to_Use_Quantum_Annealing}
 \include{src/Problem/cha_Problem}
-\chapter{Practical relization of The problem}
-
 \include{src/Conclusions_and_remarks}
 \include{src/Scratchbook}
 

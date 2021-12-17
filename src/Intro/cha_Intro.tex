@@ -1,5 +1,4 @@
-\chapter*{Introduction}
-\addcontentsline{toc}{chapter}{Introduction}
+\chapter{Introduction}
 There is probably no single point in space-time where the concept of \textit{quantum computing} emerged for the very first time. In the 70' Paul Benioff was investigating the topic and in year 1980 published a foundational article \textit{The computer as a physical system: A microscopic quantum mechanical Hamiltonian model of computers as represented by Turing machines}\cite{benioff_computer_1980}. But it took celebrity-physicist and Nobel Prize winner Richard Feynman to mark the beginning of the discipline (for sure anegdoticaly). He discussed the topic in 1981 talk \textit{Simulating physics with computers} during a small conference on the topic of \textit{Physics of Computation} held at MIT. Present were also Paul Benioff and other scientists whose work contributed to the birth of the discipline: Rolf Landauer and Tom Toffoli \cite{mit_endicott_house_physics_2018}. In his foundational talk, Feynman indicated that for an efficient simulation of quantum phenomena, a different kind of computer was needed. The reasoning behind the idea is that quantum systems description grows exponentially with the number of particles involved. A system large enough will quickly overwhelm any classical computer. The conclusion of the talk:
 \begin{quote}
 Nature isn't classical, dammit, and if you want to make a simulation of Nature, you'd better make it quantum mechanical, and by golly it's a wonderful problem because it doesn't look so easy \cite{feynman_simulating_1982}.
@@ -13,3 +12,6 @@ Some like Rolf Landauer shared their scepticism whether an effective quantum com
 
 At this stage, the theory was clearly ahead of the hardware, but the attempts to build quantum computer have been made. \textbf{What was the first practical attempt?}
 Digital vs. analog? How to introduce D-Wave into the topic? Is it the first quantum computer?
+
+\input{src/Intro/sec_Gate_Model}
+\input{src/Intro/sec_Quantum_Annealing}
