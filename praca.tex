@@ -1,0 +1,22 @@
+# Quantum computing now
+## Gate QC
+## Quantum Annealing
+### Physical design
+#### Chip
+* super conducting loops, depending on current direction represents spin up or spin down
+* 2D lattice (?)
+* external magnetic field
+#### Control circuitry and housing
+The super-conductance requires $mK$ temperature ranges, that is why all the QPU is kept in a big helium-cooled freezer.
+
+## Formulating a problem for the quantum annealer
+Quantum annealing was shown to be capable of solving a wide range of problems ranging from travelling salesman problem, map coloring, schedulling, portofolio optimization to various graph problems eg. max cut. Clearly not all of these problems can be native to any single physical device. This forces the use of a universal mathematical description of problems that can be "understood" by the quantum annealer.
+### Native problem
+Quantum annealing at its lowest level solves a problem of minimising the energy of a lattice, known as the Lenz-Ising Model (often Ising Model). Proposed by Wilhelm Lenz and later developed by his student Ernst Ising __[ref: Brush, 1967]__ in 1920' it describes the behaviour of magnetic materials. A physical system is represented by a regullar lattice of $N$ particles, each having one of two possible states - spin up (+1) or spin down (-1). This corresponds to particle orientation realtive to externally applied field. There are $2^N$ possible configurations of the particles.
+
+Another assumption is that each particle interacts only with its nearest neigbours. If the orientation of any two interacting particles is in agreement, $-U$ energy is associated. In other case the energy is $U$. The interaction tends to align neigbouring spins which corresponds to fenomenon of spontanous magnetization. It results in most of the spins having same orientation, even in absence of an external magnetic field. The total energy of the lattice is a sum of all energies. The Lenz-Ising Model was formulated for ferromagnetic materials but may also describe mixtures of two species or a mixture of molecules and "holes". Spins $-1$ and $+1$ will change to species assignment or particle being present or not (a hole). The interactions will allow for modelling of phase separation, where molecules of a particular specimen cluster together or condesation of moleculles. __[ref: Brush, 1967]__
+
+
+
+
+$\frac{1}{2}$
