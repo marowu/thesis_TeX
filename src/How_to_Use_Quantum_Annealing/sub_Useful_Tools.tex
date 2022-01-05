@@ -1,1 +1,9 @@
 \subsection{Usefull Tools for formulating QUBOS}\label{sub:qubo_tools}
+As presented before, it is possible to formulate a QUBO by hand. This approach is limited by the type of problems - not all required penalties may be available, but also the size of problems. It is very helpful to use dedicated tools, many of which are open source. Below, a selection of tools is presented.
+\subsubsection{D-Wave dimod}
+D-Wave dimod is a shared API for various D-Wave samplers. It contains Binary Quadratic Model (BQM) class for quadratic models: Lenz-Ising and QUBO. Also possible are models with integer and discrete variables.  The library also enables reduction of higher order models to quadratic ones as well as generators for specific classes of problems eg. knapsack or bin packing problems. The main strength of the library is the ease of translation between various equivalent formulations. One can formulate a constrained problem and solve it as a QUBO. The library is available under Apache License 2.0 and has documentation\cite{noauthor_dimod_2021}.
+\subsubsection{pyqubo}
+pyqubo is a library created outside of D-Wave Systems Inc. but fully integrated with Ocean SDK. It allows for formulation of QUBOs and Lenz-Ising models using mathematical expressions, their translation and export to BQM class of D-Wave dimod. The library is available under Apache License 2.0\cite{tanahashi_application_2019}\cite{zaman_pyqubo_2021}.
+\hl{so what is the difference between dimod and pyqubo?}
+\subsubsection{find qubo}
+BSD 3-Clause License
